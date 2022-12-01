@@ -1,0 +1,115 @@
+footer {
+  padding: 20px 35px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  color: #fac031;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.left h4 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.socmed {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.right ul {
+  list-style-type: none;
+}
+
+.right li {
+  margin-bottom: 5px;
+}
+
+.right li .link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.right li .link::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #fac031;
+  display: block;
+  transition: 0.2s linear;
+}
+
+.right li .link:hover::after {
+  width: 100%;
+}
+
+.right li .link:hover {
+  color: #fac031;
+}
+
+.copyright {
+  margin-top: 15px;
+}
+
+.copyright p {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .left h4 {
+    font-size: 16px;
+  }
+  .socmed {
+    font-size: 16px;
+  }
+
+  .right li .link {
+    font-size: 16px;
+  }
+
+  .copyright p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+
+  .left h4 {
+    text-align: start;
+    font-size: 16px;
+  }
+
+  .socmed {
+    font-size: 16px;
+  }
+
+  .right li .link {
+    font-size: 16px;
+  }
+
+  .copyright p {
+    font-size: 16px;
+  }
+}
