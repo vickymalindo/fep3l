@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import style from './../styles/Footer.module.css';
 
 const Footer = () => {
-  // TODO: buat bagian footernya
   return (
     <footer>
       <div className={style.content}>

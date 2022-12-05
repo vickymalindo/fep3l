@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import logo_nasduk from './../images/logo_nasduk.png';
 import style from './../styles/Nav.module.css';
 
 const Nav = () => {
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const data = localStorage.getItem('data');
   const dataParse = JSON.parse(data);
@@ -13,14 +15,18 @@ const Nav = () => {
     localStorage.clear();
     navigate('/');
   };
-
   return (
-    <header>
-      <nav>
+    <header className={style.header}>
+      {console.log(open)}
+      <nav className={style.nav}>
         <div className={style.logo}>
           <img src={logo_nasduk} alt='logo_nasduk' />
         </div>
-        <ul>
+        <FaBars
+          className={style.bars}
+          onClick={() => setOpen((prev) => !prev)}
+        />
+        <ul className={open ? `${style.open}` : ''}>
           <li>
             <Link className={style.link} to='/'>
               Home

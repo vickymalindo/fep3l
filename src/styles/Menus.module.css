@@ -12,10 +12,10 @@
 }
 
 .menu .menu_box {
-  width: 95%;
-  margin: 0 auto;
+  padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   gap: 15px 20px;
 }
 
@@ -36,7 +36,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   transition: 0.3s;
 }
 
@@ -68,4 +67,22 @@
   cursor: pointer;
   border-radius: 5px;
   outline: none;
+}
+
+@media (max-width: 1280px) {
+  .menu .menu_box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu .menu_box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu .menu_box {
+    grid-template-columns: 1fr;
+  }
 }

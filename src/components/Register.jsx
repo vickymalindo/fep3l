@@ -42,7 +42,7 @@ const Register = () => {
           <div className={style.register_image}>
             <img src={about} alt='about' />
           </div>
-          <div>
+          <div className={style.right}>
             <h1
               className={
                 message === 'Daftar Berhasil, Silahkan Login'

@@ -1,30 +1,34 @@
-header nav {
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: sticky;
-  right: 0;
-  left: 0;
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
-header nav .logo img {
+.header .nav .logo img {
   width: 100px;
   margin: 7px 0;
 }
 
-header nav ul {
+.header .nav ul {
   list-style: none;
 }
 
-header nav ul li {
+.header .nav ul li {
   display: inline-block;
   margin: 0 15px;
 }
 
-header nav ul li .link {
+.header .nav ul li .link {
   text-decoration: none;
   color: #000;
   font-weight: 500;
@@ -32,7 +36,7 @@ header nav ul li .link {
   transition: 0.1s;
 }
 
-header nav ul li .link::after {
+.header .nav ul li .link::after {
   content: '';
   width: 0;
   height: 2px;
@@ -41,15 +45,15 @@ header nav ul li .link::after {
   transition: 0.2s linear;
 }
 
-header nav ul li .link:hover::after {
+.header .nav ul li .link:hover::after {
   width: 100%;
 }
 
-header nav ul li .link:hover {
+.header .nav ul li .link:hover {
   color: #fac031;
 }
 
-header nav ul li button {
+.header .nav ul li button {
   background: rgb(253 224 71);
   color: rgb(161 98 7);
   outline: none;
@@ -67,4 +71,40 @@ header nav ul li button {
 
 .block {
   display: block;
+}
+
+.bars {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .header .nav ul {
+    display: none;
+  }
+
+  .header .nav ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(103% - 3px);
+    background: #fff;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #e2dfdf;
+  }
+
+  .header .nav ul.open li:first-child {
+    margin: 10px 0 0;
+  }
+
+  .header .nav ul.open li:last-child {
+    margin: 0 0 10px;
+  }
+
+  .bars {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
 }

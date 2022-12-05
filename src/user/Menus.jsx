@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import style from './../styles/Menus.module.css';
 
 const Menus = () => {
-  // TODO: buat menus yang harus yang mau di jual
   const [menus, setMenus] = useState([]);
 
   useEffect(() => {
