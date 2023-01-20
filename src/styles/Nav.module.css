@@ -1,17 +1,19 @@
 .header {
   position: sticky;
   top: 0;
-  right: 0;
   left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .header .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
   z-index: 1000;
+  padding: 0 40px;
 }
 
 .header .nav .logo img {
@@ -28,12 +30,19 @@
   margin: 0 15px;
 }
 
+.header .nav ul li.hidden {
+  display: none;
+}
+
 .header .nav ul li .link {
   text-decoration: none;
   color: #000;
   font-weight: 500;
   font-size: 17px;
   transition: 0.1s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .header .nav ul li .link::after {
@@ -53,7 +62,13 @@
   color: #fac031;
 }
 
-.header .nav ul li button {
+.name {
+  display: inline;
+  margin-right: 12px;
+}
+
+.header .nav ul li .btn_logout {
+  display: inline-block;
   background: rgb(253 224 71);
   color: rgb(161 98 7);
   outline: none;

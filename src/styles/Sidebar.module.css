@@ -1,0 +1,76 @@
+.sidebar {
+  background: #fac031;
+  color: #fff;
+  min-height: 100vh;
+  width: 20%;
+}
+
+.container {
+  padding: 10px 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 117px;
+}
+
+.title h3 {
+  font-size: 22px;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.list_item {
+  list-style-type: none;
+}
+
+.list_item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover .list_item_head {
+  transform: scale(1.08);
+}
+
+.icon {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dropdown {
+  background-color: #fff;
+  padding: 10px 18px;
+  border-radius: 7px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(97, 94, 94);
+  transition: transform 0.2s ease-in-out;
+}
+
+.link:hover {
+  transform: scale(1.03);
+}
+
+.link:not(:last-child) {
+  margin-bottom: 15px;
+}

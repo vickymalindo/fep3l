@@ -1,0 +1,74 @@
+.container {
+  padding: 40px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.head {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #e4e4e4;
+}
+
+.transfer {
+  text-align: start;
+  width: calc(252px + 0.22px);
+}
+
+.action {
+  width: 78px;
+  text-align: center;
+}
+
+.list {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #e4e4e4;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+.menu {
+  text-align: center;
+  width: calc(135px + 0.12px);
+}
+
+.price {
+  text-align: center;
+  width: calc(45px + 0.36px);
+}
+
+.bayar {
+  background: rgb(253 224 71);
+  color: rgb(161 98 7);
+  padding: 7px 14px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  width: 100%;
+}
+
+.empty p {
+  padding: 10px 15px;
+  font-weight: 600;
+  background: rgb(161 98 7);
+  color: #fff;
+  border-radius: 6px;
+}

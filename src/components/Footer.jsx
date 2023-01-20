@@ -1,9 +1,11 @@
-import React from 'react';
 import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import style from './../styles/Footer.module.css';
 
 const Footer = () => {
+  const token = localStorage.getItem('token');
+  const login = JSON.parse(token);
+
   return (
     <footer>
       <div className={style.content}>
@@ -33,11 +35,11 @@ const Footer = () => {
             </li>
             <li>
               <Link className={style.link} to='login'>
-                Masuk
+                {login ? 'Keluar' : 'Masuk'}
               </Link>
             </li>
             <li>
-              <Link className={style.link} to='register'>
+              <Link className={login ? style.hidden : style.link} to='register'>
                 Daftar
               </Link>
             </li>

@@ -1,6 +1,13 @@
 .login {
   width: 100%;
-  padding: 70px 30px;
+  padding: 40px 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: #fac031;
 }
 
 .error_true {
@@ -14,7 +21,15 @@
 }
 
 .error_false {
-  display: none;
+  display: block;
+  font-size: 20px;
+  background: rgb(252 165 165);
+  color: rgb(220 38 38);
+  background: rgb(134 239 172);
+  color: rgb(22 101 52);
+  padding: 7px 0;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .login .login_main {
@@ -63,6 +78,10 @@
 
 .login .login_main form .input input:focus {
   border: 2px solid #fac031;
+}
+
+.forgot {
+  display: inline-block;
 }
 
 .login .login_main form .login_btn {

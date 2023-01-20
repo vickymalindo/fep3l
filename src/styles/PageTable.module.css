@@ -1,0 +1,59 @@
+.wrapper {
+  margin-top: 40px;
+  padding: 10px 50px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper_table {
+  overflow-x: auto;
+}
+
+.table,
+td,
+th {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+th {
+  color: #fac031;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.btn_admin {
+  border: none;
+  outline: none;
+  background: #86efac;
+  color: rgb(22 101 52);
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_delete {
+  background: rgb(252 165 165);
+  color: rgb(153 27 27);
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}

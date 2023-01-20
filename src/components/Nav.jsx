@@ -9,15 +9,31 @@ const Nav = () => {
   const navigate = useNavigate();
   const data = localStorage.getItem('data');
   const dataParse = JSON.parse(data);
+  let level;
+  if (dataParse) {
+    level = dataParse.level;
+  }
 
-  const handleLogout = async (e) => {
+  const handleLogout = (e) => {
     e.preventDefault();
     localStorage.clear();
     navigate('/');
   };
+
+  const handleClick = (nav) => {
+    if (!dataParse) {
+      navigate('/login');
+    } else {
+      if (nav === 'cart') {
+        navigate('/cart');
+      } else {
+        navigate('/payment');
+      }
+    }
+  };
+
   return (
     <header className={style.header}>
-      {console.log(open)}
       <nav className={style.nav}>
         <div className={style.logo}>
           <img src={logo_nasduk} alt='logo_nasduk' />
@@ -27,24 +43,43 @@ const Nav = () => {
           onClick={() => setOpen((prev) => !prev)}
         />
         <ul className={open ? `${style.open}` : ''}>
-          <li>
+          <li className={level === 'admin' ? `${style.hidden}` : ''}>
             <Link className={style.link} to='/'>
               Home
             </Link>
           </li>
-          <li>
-            <Link className={style.link} to='/cart'>
+          <li className={level === 'admin' ? `${style.hidden}` : ''}>
+            <button className={style.link} onClick={() => handleClick('cart')}>
               Keranjang
-            </Link>
+            </button>
           </li>
           {dataParse ? (
-            <li>
-              <button
-                onClick={handleLogout}
-                className={dataParse ? `${style.block}` : `${style.hidden}`}>
-                Keluar
-              </button>
-            </li>
+            <>
+              <li className={level === 'admin' ? `${style.hidden}` : ''}>
+                <button
+                  className={style.link}
+                  to='/payment'
+                  onClick={() => handleClick('pay')}>
+                  Bayar
+                </button>
+              </li>
+              <li>
+                {level === 'admin' ? (
+                  <p className={style.name}>{dataParse.firstname}</p>
+                ) : (
+                  ''
+                )}
+                <button
+                  onClick={handleLogout}
+                  className={
+                    dataParse
+                      ? `${style.block} ${style.btn_logout}`
+                      : `${style.hidden}`
+                  }>
+                  Keluar
+                </button>
+              </li>
+            </>
           ) : (
             <>
               <li>

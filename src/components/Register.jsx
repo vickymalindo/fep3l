@@ -38,6 +38,7 @@ const Register = () => {
     <>
       <Nav />
       <div className={style.register}>
+        <h2 className={style.title}>Daftar</h2>
         <div className={style.register_main}>
           <div className={style.register_image}>
             <img src={about} alt='about' />

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import about from './../images/about.png';
 import style from './../styles/Login.module.css';
 import Nav from './Nav';
@@ -28,7 +28,7 @@ const Login = () => {
         });
         const { level } = user.data;
         if (level === 'admin') {
-          navigate('/admin');
+          navigate('/admin/allUser');
         } else {
           navigate('/user');
         }
@@ -45,17 +45,13 @@ const Login = () => {
     <>
       <Nav />
       <div className={style.login}>
+        <h2 className={style.title}>LOGIN</h2>
         <div className={style.login_main}>
           <div className={style.login_image}>
             <img src={about} alt='about' />
           </div>
           <div className={style.right}>
-            <h1
-              className={
-                message ? `${style.error_true}` : `${style.error_false}`
-              }>
-              {message}
-            </h1>
+            <h1 className={message && `${style.error_true}`}>{message}</h1>
             <form onSubmit={handleLogin}>
               <div className={style.input}>
                 <p>Email</p>
@@ -73,6 +69,9 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              <Link to='/forgotpass' className={style.forgot}>
+                Lupa Password
+              </Link>
               <button type='submit' className={style.login_btn}>
                 Masuk
               </button>

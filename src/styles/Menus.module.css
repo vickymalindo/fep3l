@@ -50,6 +50,14 @@
   color: #fac031;
 }
 
+.menu .menu_box .menu_card .menu_info .code {
+  /* background: rgb(253 224 71); */
+  color: rgb(161 98 7);
+  font-weight: normal;
+  padding: 7px 5px;
+  text-align: center;
+}
+
 .menu .menu_box .menu_card .menu_info h3 {
   text-align: center;
   margin-top: 10px;
