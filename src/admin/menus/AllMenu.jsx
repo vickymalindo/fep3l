@@ -8,7 +8,7 @@ const AllMenu = () => {
   useEffect(() => {
     let filled = false;
     const getMenus = async () => {
-      const res = await axios.get('http://127.0.0.1:8000/api/menus/all');
+      const res = await axios.get('https://bep3l.uloy.dev/api/menus/all');
       const { data } = res.data;
       setData(data);
     };

@@ -6,7 +6,9 @@ const ToAdmin = () => {
   const [data, setData] = useState([]);
 
   const toAdmin = async (id) => {
-    const res = await axios.put(`http://127.0.0.1:8000/api/auth/toAdmin/${id}`);
+    const res = await axios.put(
+      `https://bep3l.uloy.dev/api/auth/toAdmin/${id}`
+    );
     console.log(res);
     const { status } = res.data;
     if (status === 200) {
@@ -15,7 +17,7 @@ const ToAdmin = () => {
   };
 
   const getUsers = async () => {
-    const res = await axios.get('http://127.0.0.1:8000/api/auth/users');
+    const res = await axios.get('https://bep3l.uloy.dev/api/auth/users');
     const { data } = res.data;
     setData(data);
   };

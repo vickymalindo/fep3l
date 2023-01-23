@@ -17,7 +17,7 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    const res = await axios.post('http://127.0.0.1:8000/api/auth/register', {
+    const res = await axios.post('https://bep3l.uloy.dev/api/auth/register', {
       email,
       firstname,
       lastname,

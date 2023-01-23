@@ -7,7 +7,7 @@ const DeleteMenu = () => {
 
   const handleDelete = async (id) => {
     const res = await axios.delete(
-      `http://127.0.0.1:8000/api/menus/menu/${id}`
+      `https://bep3l.uloy.dev/api/menus/menu/${id}`
     );
     const { status } = res.data;
     if (status === 200) {
@@ -16,7 +16,7 @@ const DeleteMenu = () => {
   };
 
   const getMenus = async () => {
-    const res = await axios.get('http://127.0.0.1:8000/api/menus/all');
+    const res = await axios.get('https://bep3l.uloy.dev/api/menus/all');
     const { data } = res.data;
     setData(data);
   };

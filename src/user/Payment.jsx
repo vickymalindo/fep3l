@@ -33,6 +33,7 @@ const Payment = () => {
       `https://bep3l.uloy.dev/api/purchase/payment/${userId}/${id}`,
       formData
     );
+    console.log(res);
     if (res.data.status === 200) {
       alert('Berhasil, barangmu sedang disiapkan dan diantar');
       getPay();
@@ -46,7 +47,7 @@ const Payment = () => {
     const userParse = JSON.parse(user);
     const { id } = userParse;
     const res = await axios.get(
-      `https://http://127.0.0.1:8000/api/purchase/get/${id}`
+      `https://bep3l.uloy.dev/api/purchase/get/${id}`
     );
     const { purchases } = res.data.data;
     console.log(purchases);

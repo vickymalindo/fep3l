@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+      const res = await axios.post('https://bep3l.uloy.dev/api/auth/login', {
         email,
         password,
       });
@@ -23,7 +23,7 @@ const Login = () => {
         const token = access_token;
         const user = await axios({
           method: 'POST',
-          url: 'http://127.0.0.1:8000/api/auth/me',
+          url: 'https://bep3l.uloy.dev/api/auth/me',
           headers: { Authorization: `Bearer${token}` },
         });
         const { level } = user.data;

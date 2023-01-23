@@ -77,7 +77,7 @@ const Cart = () => {
     });
     const id = item?.id;
     const res = await axios.delete(
-      `http://127.0.0.1:8000/api/checkout/delete/${id}`
+      `https://bep3l.uloy.dev/api/checkout/delete/${id}`
     );
     console.log(res);
     const { status } = res.data;
@@ -109,7 +109,7 @@ const Cart = () => {
     });
 
     const res = await axios.post(
-      `http://127.0.0.1:8000/api/purchase/create/${user_id}`,
+      `https://bep3l.uloy.dev/api/purchase/create/${user_id}`,
       {
         user_id,
         user_address,
@@ -131,7 +131,9 @@ const Cart = () => {
     const user_data = localStorage.getItem('data');
     const parseData = JSON.parse(user_data);
     const id = parseData.id;
-    const res = await axios.get(`http://127.0.0.1:8000/api/checkout/get/${id}`);
+    const res = await axios.get(
+      `https://bep3l.uloy.dev/api/checkout/get/${id}`
+    );
     const { checkouts } = res.data.data;
     if (checkouts.length !== 0) {
       const data = checkouts.map((item) => {

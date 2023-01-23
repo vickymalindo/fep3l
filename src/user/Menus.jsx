@@ -22,7 +22,7 @@ const Menus = () => {
       const user_id = '' + parseData.id;
       const product_price = '' + price;
       const res = await axios.post(
-        `http://127.0.0.1:8000/api/checkout/add/${user_id}/${product_code}`,
+        `https://bep3l.uloy.dev/api/checkout/add/${user_id}/${product_code}`,
         {
           user_id,
           product_code,
@@ -42,7 +42,7 @@ const Menus = () => {
 
   useEffect(() => {
     const getMenus = async () => {
-      const res = await axios.get('http://127.0.0.1:8000/api/menus/all');
+      const res = await axios.get('https://bep3l.uloy.dev/api/menus/all');
       const { data } = res.data;
       setMenus(data);
     };

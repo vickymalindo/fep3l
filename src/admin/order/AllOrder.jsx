@@ -9,7 +9,7 @@ const AllOrder = () => {
     let filled = false;
     const getOrder = async () => {
       const res = await axios.get(
-        'http://127.0.0.1:8000/api/purchase/get/admin'
+        'https://bep3l.uloy.dev/api/purchase/get/admin'
       );
       const { data } = res.data;
       setData(data);

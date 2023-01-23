@@ -19,9 +19,10 @@ const AddMenu = () => {
 
     try {
       const res = await axios.post(
-        'http://127.0.0.1:8000/api/menus/menu',
+        'https://bep3l.uloy.dev/api/menus/menu',
         formData
       );
+      console.log(res);
       const { status } = res.data;
       if (status === 200) {
         alert('Berhasil tambah menu');

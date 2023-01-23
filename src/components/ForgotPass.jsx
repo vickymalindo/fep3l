@@ -12,7 +12,7 @@ const ForgotPass = () => {
   const handleForgot = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      `http://127.0.0.1:8000/api/auth/forgot/${email}`,
+      `https://bep3l.uloy.dev/api/auth/forgot/${email}`,
       {
         email,
         newPassword,
@@ -64,7 +64,7 @@ const ForgotPass = () => {
                 />
               </div>
               <button type='submit' className={style.login_btn}>
-                Masuk
+                Ubah
               </button>
             </form>
           </div>
