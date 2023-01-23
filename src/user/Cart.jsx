@@ -79,7 +79,6 @@ const Cart = () => {
     const res = await axios.delete(
       `https://bep3l.uloy.dev/api/checkout/delete/${id}`
     );
-    console.log(res);
     const { status } = res.data;
     if (status === 200) {
       alert('Hapus berhasil');
@@ -139,7 +138,6 @@ const Cart = () => {
       const data = checkouts.map((item) => {
         return { ...item, check: false, count: 1 };
       });
-      console.log(data);
       setCheckouts(data);
     } else {
       setMessage('Keranjang kosong');

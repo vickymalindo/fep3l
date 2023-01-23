@@ -9,7 +9,6 @@ const ToAdmin = () => {
     const res = await axios.put(
       `https://bep3l.uloy.dev/api/auth/toAdmin/${id}`
     );
-    console.log(res);
     const { status } = res.data;
     if (status === 200) {
       getUsers();

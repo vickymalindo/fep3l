@@ -33,7 +33,6 @@ const Payment = () => {
       `https://bep3l.uloy.dev/api/purchase/payment/${userId}/${id}`,
       formData
     );
-    console.log(res);
     if (res.data.status === 200) {
       alert('Berhasil, barangmu sedang disiapkan dan diantar');
       getPay();
@@ -50,7 +49,6 @@ const Payment = () => {
       `https://bep3l.uloy.dev/api/purchase/get/${id}`
     );
     const { purchases } = res.data.data;
-    console.log(purchases);
     if (purchases.length === 0) {
       setMessage('Data kosong atau belum melakukan pemesanan');
     } else {
